@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attah Attah - Portfolio</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Attah Attah</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Attah Attah, a passionate developer/designer/student/etc. I enjoy learning and building web-based solutions.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="project">
+    <h3>Project 1</h3>
+    <button class="toggle-btn">Show Details</button>
+    <div class="project-details hidden">
+      <p>This is a description of Project 1. It does awesome things.</p>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Project 2</h3>
+    <button class="toggle-btn">Show Details</button>
+    <div class="project-details hidden">
+      <p>This is a description of Project 2. It also does great things.</p>
+    </div>
+  </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+  <h2>Contact Me</h2>
+  <form id="contactForm" novalidate>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <div class="error-message" id="nameError"></div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <div class="error-message" id="emailError"></div>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    <div class="error-message" id="messageError"></div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Attah Attah. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
