@@ -57,5 +57,5 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset(); // Clearing out the form
     }
   });
-})
+});
 
