@@ -92,6 +92,15 @@ input, textarea {
 }
 
 
+.toggle-btn, button {
+  transition: background 0.3s, transform 0.2s;
+}
+.toggle-btn:hover, button:hover {
+  background: #f20606;
+  color: #fff;
+  transform: scale(1.05);
+}
+
 
 
 
@@ -131,4 +140,15 @@ input, textarea {
   background: #333;
   color: #eee;
   border-color: #444;
+}
+
+
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

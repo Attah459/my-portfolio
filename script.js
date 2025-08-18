@@ -33,6 +33,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const revealSections = () => {
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        section.classList.add("visible");
+      }
+    });
+  };
+  window.addEventListener("scroll", revealSections);
+  revealSections();
+});
+
+
 
 
 
@@ -40,23 +55,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Stop form from submitting until validation passes
+    event.preventDefault(); 
 
-    // Clear out any old error messages
+    
     document.getElementById("nameError").textContent = "";
     document.getElementById("emailError").textContent = "";
     document.getElementById("messageError").textContent = "";
 
     let isValid = true;
 
-    // Name validation
+   
     const name = document.getElementById("name").value.trim();
     if (name === "") {
       document.getElementById("nameError").textContent = "Name is required.";
       isValid = false;
     }
 
-    // Email validation
+    
     const email = document.getElementById("email").value.trim();
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
@@ -64,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       isValid = false;
     }
 
-    // Message validation
+    
     const message = document.getElementById("message").value.trim();
     if (message === "") {
       document.getElementById("messageError").textContent = "Message can't be empty.";
@@ -73,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isValid) {
       alert("Form submitted successfully!");
-      form.reset(); // Clearing out the form
+      form.reset(); 
     }
   });
 });
