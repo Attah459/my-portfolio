@@ -118,3 +118,17 @@ input, textarea {
 
 
 }
+
+
+/* Example dark mode styles */
+.dark-mode {
+  background-color: #222;
+  color: #000000;
+}
+.dark-mode button,
+.dark-mode input,
+.dark-mode textarea {
+  background: #333;
+  color: #eee;
+  border-color: #444;
+}
