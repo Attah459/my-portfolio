@@ -19,7 +19,7 @@ body {
 /* Light mode button text */
 .toggle-btn, button {
   transition: background 0.3s, transform 0.2s;
-  color: #333; /* Reverted to default dark text for light mode buttons */
+  color: #333; 
 }
 
 /* Button hover animation */
@@ -189,7 +189,7 @@ input, textarea {
 
 .toggle-btn, button {
   transition: background 0.3s, transform 0.2s;
-  color: #333; /* Reverted to default dark text for light mode buttons */
+  color: #333; 
 }
 .toggle-btn:hover, button:hover {
   background: #f20606;
