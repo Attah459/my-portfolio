@@ -10,7 +10,7 @@ body {
   background-color: #fff;
   color: #333;
   padding-bottom: 60px; 
-  background-image: url('images/bg.jpg'); /* Light mode background image */
+  background-image: url('images/bg_comp.jpg'); /* Light mode background image */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -80,7 +80,7 @@ section.visible {
 .dark-mode {
   background-color: #222;
   color: #151515;
-  background-image: url('images/bg-dark.jpg'); /* Dark mode background image */
+  background-image: url('images/bg-dark_comp.jpg'); /* Dark mode background image */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
