@@ -10,10 +10,102 @@ body {
   background-color: #fff;
   color: #333;
   padding-bottom: 60px; 
-  background-image: url('images/bg.jpg'); 
+  background-image: url('images/bg.jpg'); /* Light mode background image */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+/* Light mode button text */
+.toggle-btn, button {
+  transition: background 0.3s, transform 0.2s;
+  color: #333; /* Reverted to default dark text for light mode buttons */
+}
+
+/* Button hover animation */
+.toggle-btn:hover, button:hover {
+  background: #f20606;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Link underline animation */
+nav a {
+  position: relative;
+  transition: color 0.3s;
+}
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f20606;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+nav a:hover {
+  color: #f20606;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Section fade-in animation */
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Light mode section text */
+#projects, #contact {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #222;
+  color: #151515;
+  background-image: url('images/bg-dark.jpg'); /* Dark mode background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Dark mode button/input styles */
+.dark-mode button,
+.dark-mode input,
+.dark-mode textarea {
+  background: #333;
+  color: #111; /* Dark black text */
+  border-color: #444;
+}
+
+/* Dark mode section styles */
+.dark-mode section {
+  background-color: #e0e0e0; /* Lighter grey for all sections */
+  color: #111; /* Dark black text */
+}
+
+/* Even greyer for project and contact sections in dark mode */
+.dark-mode #projects,
+.dark-mode #contact {
+  background-color: #5a5a5a; /* Even greyer */
+  color: #111;
 }
 
 header {
@@ -97,6 +189,7 @@ input, textarea {
 
 .toggle-btn, button {
   transition: background 0.3s, transform 0.2s;
+  color: #333; /* Reverted to default dark text for light mode buttons */
 }
 .toggle-btn:hover, button:hover {
   background: #f20606;
@@ -136,34 +229,15 @@ input, textarea {
 .dark-mode {
   background-color: #222;
   color: #151515;
-  background-image: url('images/bg-dark.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
-
-.dark-mode section {
-  background-color: #474747; 
-  color: #111; 
-}
-
 .dark-mode button,
 .dark-mode input,
 .dark-mode textarea {
   background: #333;
-  color: #111; 
+  color: #514f4f;
   border-color: #444;
 }
 
-.dark-mode #projects {
-  background-color: #5a5a5a; 
-  color: #111;
-}
-
-.dark-mode #contact {
-  background-color: #5a5a5a; 
-  color: #111;
-}
 
 section {
   opacity: 0;
